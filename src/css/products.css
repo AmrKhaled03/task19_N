@@ -1,0 +1,138 @@
+.container{
+    width: 100%;
+
+}
+.row{
+    width: 100%;
+  
+}
+.card{
+    border: 1px solid #cce7d0;
+display: flex;
+justify-content: center;
+min-width: 250px;
+align-items: center;
+flex-direction: column;
+
+width: 22%;
+margin:15px 0;
+cursor: pointer;
+border-radius: 25px;
+padding: 10px 12px;
+box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+}
+.card .img img{
+box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.03);
+border-radius: 20px;
+
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.panner2{
+      width: 100%;
+background: url("../img//banner/b1.jpg") no-repeat;
+background-position: center;
+background-color: #041e42;
+background-size: cover;
+height: 40vh;
+}
+.panner2 h1, .panner2 p{
+    color: white;
+}
+.panner2 h1{
+    font-weight: 900;
+    letter-spacing: 1px;
+    
+}
+.smalls .row img{
+    width: 25%;
+
+
+}
+.main-img img{
+    overflow: hidden;
+width: 100%;
+   border:1em solid black;
+   border-radius: 20px;
+}
+    .previews img {
+            width: 100%;
+            height: 140px;
+
+        }
+.text-white{
+    text-decoration: none;
+    text-align: center;
+
+}
+.panner3{
+          width: 100%;
+background: url("../img/about/banner.png") no-repeat;
+background-position: center;
+background-color: #041e42;
+background-size: cover;
+height: 40vh;
+}
+.panner3 h1, .panner3 p{
+    color: white;
+}
+.panner3 h1{
+    font-weight: 900;
+    letter-spacing: 1px;
+    
+}
+
+
+.panner4{
+          width: 100%;
+background: url("../img/about/banner.png") no-repeat;
+background-position: center;
+background-color: #041e42;
+background-size: cover;
+height: 40vh;
+}
+.panner4 h1, .panner4 p{
+    color: white;
+}
+.panner4 h1{
+    font-weight: 900;
+    letter-spacing: 1px;
+    
+}
+.container .row .video video{
+    border-radius: 20px;
+}
+.contact{
+    border:1px solid #999
+}
+iframe{
+    width: 600px;
+    height: 450px;
+}
+  .previews .col-3{
+cursor: pointer;
+
+    }
+    .col-3 img{
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+      .previews .col-3:hover{
+          scale: 1.1;
+      }
+@media only screen and  (min-width:300px) and (max-width:576px){
+    .previews .col-3{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+}
+ @media only screen and  (min-width:577px) and (max-width:767px){
+       .previews .col-3{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+ }
