@@ -8,14 +8,14 @@ import Services from '../components/Services'
 import Small from '../components/Small'
 
 
-const Home = (props) => {
+const Home = () => {
   return (
     <div>
       <Panner />
       <Services />
-      <Feautered features={props.features} addCart={props.addCart} updateCartItem={props.updateCartItem} decCartItem={props.decCartItem} delItem={props.delItem} delAll={props.delAll} />
+      <Feautered  />
       <Reservice />
-      <New news={props.news} addCart={props.addCart} updateCartItem={props.updateCartItem} decCartItem={props.decCartItem} delItem={props.delItem} delAll={props.delAll} />
+      <New  />
       <Small />
       <Newtxt />
     </div>

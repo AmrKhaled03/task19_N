@@ -1,16 +1,18 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
 import "../App.css"
 import "../css/products.css"
 
 import { Link } from "react-router-dom";
-const Feautered = (props) => {
+import { ShoppingContext } from './ShoppingContext';
+const Feautered = () => {
+  const{features=[],addCart}=useContext(ShoppingContext);
   return (
     <div className="featured text-center p-5  mt-3">
 <h1>Featured Products</h1>
 <p>Summer Collection New Modern Design</p>
           <div className="row  mt-5 d-flex justify-content-center align-items-center">
-              {props.features.map((product)=>(
+              {features.map((product)=>(
              <div className="col-lg-3 card mx-3 " key={product.id}>
         <div className="img">
 <img src={product.img} className="img-fluid"  alt={product.title}/>
@@ -18,7 +20,7 @@ const Feautered = (props) => {
         <div className="topics">
                           <h4>{product.title}</h4>
                           <span>{product.price}$</span>
-                          <div className="cart" onClick={()=>props.addCart(product)} >
+                          <div className="cart" onClick={()=>addCart(product)} >
                       <Link className="btn btn-success">Add To Cart </Link>
 
    

@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useParams, Link } from "react-router-dom"
 
 
 import "../css/products.css"
 import Newtxt from '../components/Newtxt'
+import { ShoppingContext } from '../components/ShoppingContext'
 const ProductDetails = (props) => {
+  const{products=[],addCart}=useContext(ShoppingContext);
   const { productId } = useParams();
-  const productItem = props.prod.find(product => product.id === parseInt(productId));
+  const productItem = products.find(product => product.id === parseInt(productId));
   // const mainImg = productItem.img;
 const[mainImg , setMainimg]=useState(productItem.imgs[0])
 const handleClick =(i)=>{
@@ -57,7 +59,7 @@ const handleClick =(i)=>{
             {productItem.price}$
           </h3>
           <p>{productItem.description}</p>
-          <div className="cart" onClick={() => props.addCart(productItem)} >
+          <div className="cart" onClick={() =>addCart(productItem)} >
             <button className=" btn btn-primary">
               ADD TO CART
             </button>

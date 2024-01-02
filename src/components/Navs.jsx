@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link  } from 'react-router-dom' ;
 import "../App.css"
 
@@ -10,9 +10,10 @@ import { faCartShopping , faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import logo from "../img/logo.png"
+import { ShoppingContext } from './ShoppingContext';
  const Navs = ( props) => {
   
-
+const{cart}=useContext(ShoppingContext);
 
 
 
@@ -70,7 +71,7 @@ import logo from "../img/logo.png"
 
 
 }
-                          <Link className="link p-2 " onClick={props.openAside}  ><FontAwesomeIcon icon={faCartShopping}className="fa-cart"  /> <span className="count ms-sm-0 ps-lg-4 ms-lg-2 ">{props.cart.length}</span></Link>
+                          <Link className="link p-2 " onClick={props.openAside}  ><FontAwesomeIcon icon={faCartShopping}className="fa-cart"  /> <span className="count ms-sm-0 ps-lg-4 ms-lg-2 ">{cart.length}</span></Link>
                       </Nav>
                   </Navbar.Collapse>
               </Container>
